@@ -27,6 +27,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
 
@@ -118,28 +119,28 @@
                         <img src="assets/img/work3.jpg" alt="">
 
                         <div class="portfolio__link">
-                            <a class="portfolio__link-name">Peut être votre projet ? 😎</a>
+                            <a class="portfolio__link-name">Peut etre votre projet ? 😎</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
                         <img src="assets/img/work4.jpg" alt="">
 
                         <div class="portfolio__link">
-                            <a class="portfolio__link-name">Peut être votre projet ? 😎</a>
+                            <a class="portfolio__link-name">Peut etre votre projet ? 😎</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
                         <img src="assets/img/work5.jpg" alt="">
 
                         <div class="portfolio__link">
-                            <a class="portfolio__link-name">Peut être votre projet ? 😎</a>
+                            <a class="portfolio__link-name">Peut etre votre projet ? 😎</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
                         <img src="assets/img/work6.jpg" alt="">
 
                         <div class="portfolio__link">
-                            <a class="portfolio__link-name">Peut être votre projet ? 😎</a>
+                            <a class="portfolio__link-name">Peut etre votre projet ? 😎</a>
                         </div>
                     </div>
                 </div>
@@ -162,6 +163,7 @@
                         <li><a href="#about" class="footer__link">À propos</a></li>
                         <li><a href="#skills" class="footer__link">Skills</a></li>
                         <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -181,5 +183,90 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!--===== COPY 1 =====-->
+        <script>
+        function Clipboard_CopyTo(value) {
+            var tempInput = document.createElement("input");
+            tempInput.value = value;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+          }
+          
+          document.querySelector('#copy').onclick = function() {
+            Clipboard_CopyTo('_Ap0The0Z_#3758');
+            window.alert("Identifiant discord copié dans le presse papier !");
+          }
+        </script>
+         <!--===== COPY 2 =====-->
+         <script>
+            function Clipboard_CopyTo2(value) {
+                var tempInput = document.createElement("input");
+                tempInput.value = value;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+              }
+              
+              document.querySelector('#copy2').onclick = function() {
+                Clipboard_CopyTo('_Ap0The0Z_#3758');
+                window.alert("Identifiant discord copié dans le presse papier !");
+              }
+            </script>
+
+            <!--===== COPY 3 =====-->
+         <script>
+            function Clipboard_CopyTo3(value) {
+                var tempInput = document.createElement("input");
+                tempInput.value = value;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+              }
+              
+              document.querySelector('#copy3').onclick = function() {
+                Clipboard_CopyTo('_Ap0The0Z_#3758');
+                window.alert("Identifiant discord copié dans le presse papier !");
+              }
+            </script>
+            <!--===== SEND WEBHOOK =====-->
+            <script>
+            function form() {
+                var nom = document.getElementById('name').value
+                var discord = document.getElementById('discord').value
+                var msg = document.getElementById('msg').value
+
+                var request = new XMLHttpRequest();
+                request.open("POST", "https://discord.com/api/webhooks/769936244498104320/grK7FtJc-nXAuR6JzE7yZlf2E0Jr40vZ2rxCf-JHjcBTa5Ppr4L6v0sjHduhYLcW-mYt");
+
+                request.setRequestHeader('Content-type', 'application/json');
+                
+                var myEmbed = {
+                    author: {
+                        name: 'nom'
+                        },
+                    title: 'discord',
+                    description: 'msg',
+                    color: hexToDecimal("#ff0000")
+            }
+
+            var params = {
+                username: "Stonks Hook",
+                embeds: [ myEmbed ]
+            }
+
+            request.send(JSON.stringify(params));
+
+            function hexToDecimal(hex) {
+  return parseInt(hex.replace("#",""), 16)
+}
+
+            }
+
+        </script>
     </body>
 </html>
